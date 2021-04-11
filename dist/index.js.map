@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../src/greet.tsx"],
-  "sourcesContent": ["import * as React from \"react\";\n\ntype GreetProps = {\n  name: string;\n};\n\nexport function Greet({ name }: GreetProps) {\n  return <p>Hello there, {name}</p>;\n}\n"],
-  "mappings": ";AAAA;AAAA;AAAA;AAMO,eAAe,CAAE,OAAoB;AAC1C,SAAO,8BAAC,KAAD,MAAG,iBAAc;AAAA;",
-  "names": []
-}
