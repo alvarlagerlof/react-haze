@@ -6,9 +6,17 @@
     "type": "git",
     "url": "https://github.com/alvarlagerlof/react-haze"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typescript": "tsc --noEmit",
+    "typescript-watch": "tsc --noEmit --watch",
+    "esbuild": "node build.js",
+    "esbuild-watch": "node build.js watch",
+    "build": "yarn run typescript && yarn run esbuild",
+    "build-watch": "concurrently \"yarn run typescript-watch\" \"yarn run esbuild-watch\""
   },
   "keywords": [
     "react",
@@ -20,5 +28,15 @@
     "mist"
   ],
   "author": "Alvar Lagerlöf <hey@alvar.dev> (https://alvar.dev)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "concurrently": "^6.0.1",
+    "esbuild": "^0.11.7",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
 }
