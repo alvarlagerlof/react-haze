@@ -27,7 +27,7 @@
     "fog",
     "mist"
   ],
-  "author": "Alvar Lagerlöf <hey@alvar.dev> (https://alvar.dev)",
+  "author": "Alvar Lagerlöf <hello@alvar.dev> (https://alvar.dev)",
   "license": "MIT",
   "devDependencies": {
     "@types/react": "^17.0.3",

@@ -2,6 +2,8 @@
   "name": "demo",
   "version": "0.0.0",
   "description": "This is using npm for instant ../ package refresh. Does not work with yarn",
+  "author": "Alvar Lagerlöf <hello@alvar.dev> (https://alvar.dev)",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
