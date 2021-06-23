@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/alvarlagerlof/react-haze"
   },
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -16,7 +19,9 @@
     "esbuild": "node build.js",
     "esbuild-watch": "node build.js watch",
     "build": "yarn run typescript && yarn run esbuild",
-    "build-watch": "concurrently \"yarn run typescript-watch\" \"yarn run esbuild-watch\""
+    "build-watch": "concurrently \"yarn run typescript-watch\" \"yarn run esbuild-watch\"",
+    "storybook": "start-storybook -p 6006 ",
+    "build-storybook": "build-storybook"
   },
   "keywords": [
     "react",
@@ -30,13 +35,24 @@
   "author": "Alvar Lagerlöf <hello@alvar.dev> (https://alvar.dev)",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@storybook/addon-actions": "^6.3.0",
+    "@storybook/addon-essentials": "^6.3.0",
+    "@storybook/addon-links": "^6.3.0",
+    "@storybook/react": "^6.3.0",
     "@types/react": "^17.0.3",
+    "babel-loader": "^8.2.2",
     "concurrently": "^6.0.1",
     "esbuild": "^0.11.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "@vanilla-extract/css": "^1.1.0"
   }
 }

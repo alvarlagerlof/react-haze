@@ -1,1 +1,3 @@
-export { Greet } from "./greet";
+import Haze from "./Haze";
+
+export default Haze;
