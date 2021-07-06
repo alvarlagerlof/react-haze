@@ -2369,7 +2369,7 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@vanilla-extract/css@^1.1.0":
+"@vanilla-extract/css@^1.0.0", "@vanilla-extract/css@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@vanilla-extract/css/-/css-1.1.0.tgz#436ceb348aacecbe6646d86aa17e81b3aaef5573"
   integrity sha512-tvoHwhBq/jlnE0ayt7LLGFljBvdgeuRaa3vCffzqedsAxNQVcBb4FAlU8HokeSnp+eofqYiHyHytme0807ar0A==
@@ -2382,6 +2382,27 @@
     csstype "^3.0.7"
     dedent "^0.7.0"
     deep-object-diff "^1.1.0"
+
+"@vanilla-extract/esbuild-plugin@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/esbuild-plugin/-/esbuild-plugin-1.1.0.tgz#d877c639622da15b2e0aa69d5ed92b6f860b19cc"
+  integrity sha512-Lz196deft86eqpc74ss2kjpXf13RqTtnIbajqaHrOKQdjCSkA/KKgbQK7IN+NSTp0sCtAe5xFzVSN++0Xn5mhQ==
+  dependencies:
+    "@vanilla-extract/integration" "^1.0.0"
+
+"@vanilla-extract/integration@^1.0.0":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/integration/-/integration-1.0.1.tgz#48ebe910f29b0da88e9876286f4d0b658a6f27ae"
+  integrity sha512-dm1dLFewXCVXuXe+3BPb1iK/EFubxkzevLOepMY8z+wUIUv0xS8PdccY3n7vXPTsSNg5f3Bm3IkaL2ynj+LcJA==
+  dependencies:
+    "@vanilla-extract/css" "^1.0.0"
+    chalk "^4.1.1"
+    dedent "^0.7.0"
+    esbuild "^0.11.16"
+    eval "^0.1.6"
+    find-up "^5.0.0"
+    javascript-stringify "^2.0.1"
+    lodash "^4.17.21"
 
 "@vanilla-extract/private@^1.0.0":
   version "1.0.0"
@@ -4463,6 +4484,11 @@ es6-shim@^0.35.5:
   resolved "https://registry.yarnpkg.com/es6-shim/-/es6-shim-0.35.6.tgz#d10578301a83af2de58b9eadb7c2c9945f7388a0"
   integrity sha512-EmTr31wppcaIAgblChZiuN/l9Y7DPyw8Xtbg7fIVngn6zMW+IEBJDJngeKC3x6wr0V/vcA2wqeFnaw1bFJbDdA==
 
+esbuild@^0.11.16:
+  version "0.11.23"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.11.23.tgz#c42534f632e165120671d64db67883634333b4b8"
+  integrity sha512-iaiZZ9vUF5wJV8ob1tl+5aJTrwDczlvGP0JoMmnpC2B0ppiMCu8n8gmy5ZTGl5bcG081XBVn+U+jP+mPFm5T5Q==
+
 esbuild@^0.11.7:
   version "0.11.7"
   resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.11.7.tgz"
@@ -4548,6 +4574,13 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
+
+eval@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/eval/-/eval-0.1.6.tgz#9620d7d8c85515e97e6b47c5814f46ae381cb3cc"
+  integrity sha512-o0XUw+5OGkXw4pJZzQoXUk+H87DHuC+7ZE//oSrRGtatTmr12oTnLfg6QOq9DyTt0c/p4TwzgmkKrBzWTSizyQ==
+  dependencies:
+    require-like ">= 0.1.1"
 
 events@^3.0.0:
   version "3.3.0"
@@ -6055,6 +6088,11 @@ iterate-value@^1.0.2:
   dependencies:
     es-get-iterator "^1.0.2"
     iterate-iterator "^1.0.1"
+
+javascript-stringify@^2.0.1:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/javascript-stringify/-/javascript-stringify-2.1.0.tgz#27c76539be14d8bd128219a2d731b09337904e79"
+  integrity sha512-JVAfqNPTvNq3sB/VHQJAFxN/sPgKnsKrCwyRt15zwNCdrMMJDdcEOdubuy+DuJYYdm0ox1J4uzEuYKkN+9yhVg==
 
 jest-haste-map@^26.6.2:
   version "26.6.2"
@@ -8073,6 +8111,11 @@ require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz"
   integrity sha1-jGStX9MNqxyXbiNE/+f3kqam30I=
+
+"require-like@>= 0.1.1":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/require-like/-/require-like-0.1.2.tgz#ad6f30c13becd797010c468afa775c0c0a6b47fa"
+  integrity sha1-rW8wwTvs15cBDEaK+ndcDAprR/o=
 
 resolve-from@^4.0.0:
   version "4.0.0"

@@ -18,7 +18,6 @@ main {
 }
 
 main section h1 {
-  margin-bottom: 16px;
   font-size: 2em;
 }
 
@@ -27,7 +26,8 @@ section ul {
   flex-direction: row;
   gap: 12px;
   list-style-type: none;
-  padding: 0;
+  padding: 16px 16px;
+  margin: 0px -16px;
   overflow-x: scroll;
 }
 

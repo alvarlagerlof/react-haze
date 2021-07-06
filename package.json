@@ -46,13 +46,13 @@
     "esbuild": "^0.11.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "@vanilla-extract/css": "^1.1.0",
+    "@vanilla-extract/esbuild-plugin": "^1.1.0"
   },
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "dependencies": {
-    "@vanilla-extract/css": "^1.1.0"
-  }
+  "dependencies": {}
 }

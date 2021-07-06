@@ -1,7 +1,7 @@
 import React from "react";
 import Haze from "../";
 
-import "./style.css";
+//import "./style.NOTcssNOT";
 
 function Row() {
   return (

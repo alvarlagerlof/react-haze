@@ -6,8 +6,9 @@
     "jsx": "react",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "skipLibCheck": true
   },
   "include": ["src"],
-  "exclude": ["node_modukes", "dist"]
+  "exclude": ["node_modules", "dist", "src/stories"]
 }
