@@ -15,11 +15,6 @@ export const relative = style({
 
 export const fade = styleVariants({
   [Edge.Start]: {
-    selectors: {
-      ul: {
-        background: "orange",
-      },
-    },
     "::after": {
       content: `""`,
       position: "absolute",
