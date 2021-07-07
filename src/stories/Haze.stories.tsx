@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import Haze from "../../";
+import "../../dist/index.css";
+
 import places from "./places";
 import PlaceCard from "./PlaceCard";
 
@@ -10,13 +12,27 @@ import "./style.css";
 export default {
   title: "Example/Haze",
   component: Haze,
+  argTypes: {
+    color: {
+      control: { type: "color" },
+      defaultValue: "red",
+    },
+    orientation: {
+      control: { type: "select" },
+      options: ["horizontal", "vertical"],
+    },
+    offset: {
+      control: { type: "number" },
+      defaultValue: 20,
+    },
+  },
 } as ComponentMeta<typeof Haze>;
 
-export const Horixontal: ComponentStory<typeof Haze> = (args) => {
+export const Horizontal: ComponentStory<typeof Haze> = (args) => {
   const ref = useRef(null);
 
   return (
-    <Haze {...args} orientation="horizontal" offset={100} scrollContainer={ref}>
+    <Haze {...args} scrollContainer={ref}>
       <ul
         ref={ref}
         style={{
@@ -36,11 +52,15 @@ export const Horixontal: ComponentStory<typeof Haze> = (args) => {
   );
 };
 
+Horizontal.args = {
+  orientation: "horizontal",
+};
+
 export const Vertical: ComponentStory<typeof Haze> = (args) => {
   const ref = useRef(null);
 
   return (
-    <Haze {...args} orientation="vertical" offset={100} scrollContainer={ref}>
+    <Haze {...args} scrollContainer={ref}>
       <ul
         ref={ref}
         style={{
@@ -60,4 +80,8 @@ export const Vertical: ComponentStory<typeof Haze> = (args) => {
       </ul>
     </Haze>
   );
+};
+
+Vertical.args = {
+  orientation: "vertical",
 };

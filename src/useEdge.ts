@@ -3,7 +3,7 @@ import { Ref, useLayoutEffect, useState } from "react";
 enum Edge {
   Start,
   End,
-  None,
+  Both,
 }
 
 function useEdge(
@@ -27,14 +27,14 @@ function useEdge(
             event.target.clientWidth,
         };
 
-        if (from.start < offset) {
+        if (from.start > offset) {
           setEdge(Edge.Start);
         }
-        if (from.end < offset) {
+        if (from.end > offset) {
           setEdge(Edge.End);
         }
         if (from.start > offset && from.end > offset) {
-          setEdge(Edge.None);
+          setEdge(Edge.Both);
         }
       } else if (orientation == "vertical") {
         const from = {
@@ -45,14 +45,14 @@ function useEdge(
             event.target.clientHeight,
         };
 
-        if (from.start < offset) {
+        if (from.start > offset) {
           setEdge(Edge.Start);
         }
-        if (from.end < offset) {
+        if (from.end > offset) {
           setEdge(Edge.End);
         }
         if (from.start > offset && from.end > offset) {
-          setEdge(Edge.None);
+          setEdge(Edge.Both);
         }
       }
     }
