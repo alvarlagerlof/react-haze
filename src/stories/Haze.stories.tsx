@@ -68,7 +68,7 @@ export const Vertical: ComponentStory<typeof Haze> = (args) => {
           flexDirection: "column",
           gap: "16px",
           overflowY: "scroll",
-          height: "500px",
+          height: "100vh",
           paddingInline: "24px",
           marginInline: "-24px",
           paddingBlock: "24px",
