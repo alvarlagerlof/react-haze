@@ -45,8 +45,6 @@ function useSide(
             event.target.clientHeight,
         };
 
-        console.log("vertical");
-
         if (from.start < offset) {
           setSide(Side.Start);
         }
