@@ -11,4 +11,5 @@ export const parameters = {
   viewport: {
     viewports: MINIMAL_VIEWPORTS,
   },
+  layout: "fullscreen",
 };

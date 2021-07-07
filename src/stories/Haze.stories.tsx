@@ -40,8 +40,7 @@ export const Horizontal: ComponentStory<typeof Haze> = (args) => {
           flexDirection: "row",
           gap: "16px",
           overflowX: "scroll",
-          padding: "24px",
-          marginInline: "-24px",
+          padding: "16px",
         }}
       >
         {places.map((place) => (
@@ -69,9 +68,7 @@ export const Vertical: ComponentStory<typeof Haze> = (args) => {
           gap: "16px",
           overflowY: "scroll",
           height: "100vh",
-          paddingInline: "24px",
-          marginInline: "-24px",
-          paddingBlock: "24px",
+          padding: "16px",
         }}
       >
         {places.map((place) => (
