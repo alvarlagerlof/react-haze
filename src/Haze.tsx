@@ -3,7 +3,7 @@ import { createInlineTheme } from "@vanilla-extract/dynamic";
 
 import ScrollContainer from "./ScollContainer";
 
-import * as styles from "./Haze.css";
+import * as styles from "./style.css";
 
 type HazeProps = {
   orientation: "vertical" | "horizontal";

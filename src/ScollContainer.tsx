@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 
 import { useEdge } from "./useEdge";
 
-import * as styles from "./Haze.css";
+import * as styles from "./style.css";
 
 type ScrollContainerProps = {
   orientation: "vertical" | "horizontal";
