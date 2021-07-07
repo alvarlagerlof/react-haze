@@ -1,7 +1,7 @@
 import React, { Ref } from "react";
-import { Side, useSide } from "./useSide";
+import { Edge, useEdge } from "./useEdge";
 
-//import * as styles from "./Haze.css";
+import * as styles from "./Haze.css";
 
 type HazeProps = {
   orientation: "vertical" | "horizontal";
@@ -16,16 +16,16 @@ export default function Haze({
   scrollContainer,
   children,
 }: HazeProps) {
-  const side: Side = useSide(orientation, offset, scrollContainer);
+  const edge = useEdge(orientation, offset, scrollContainer);
 
   return (
     <>
       <div>
-        <p>Haze that is: {orientation}</p>
-        <p>Side: {Side[side].toString()}</p>
+        <p>Orientation: {orientation}</p>
+        <p>Edge: {Edge[edge].toString()}</p>
       </div>
 
-      <>{children}</>
+      <div className={styles.test}>{children}</div>
     </>
   );
 }

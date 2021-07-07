@@ -1,17 +1,17 @@
 import { Ref, useLayoutEffect, useState } from "react";
 
-enum Side {
+enum Edge {
   Start,
   End,
   None,
 }
 
-function useSide(
+function useEdge(
   orientation: "vertical" | "horizontal",
   offset: number,
   element: Ref<HTMLElement>
 ) {
-  const [side, setSide] = useState(Side.Start);
+  const [edge, setEdge] = useState<Edge>(Edge.Start);
 
   useLayoutEffect(() => {
     // @ts-expect-error: ugh
@@ -28,13 +28,13 @@ function useSide(
         };
 
         if (from.start < offset) {
-          setSide(Side.Start);
+          setEdge(Edge.Start);
         }
         if (from.end < offset) {
-          setSide(Side.End);
+          setEdge(Edge.End);
         }
         if (from.start > offset && from.end > offset) {
-          setSide(Side.None);
+          setEdge(Edge.None);
         }
       } else if (orientation == "vertical") {
         const from = {
@@ -46,13 +46,13 @@ function useSide(
         };
 
         if (from.start < offset) {
-          setSide(Side.Start);
+          setEdge(Edge.Start);
         }
         if (from.end < offset) {
-          setSide(Side.End);
+          setEdge(Edge.End);
         }
         if (from.start > offset && from.end > offset) {
-          setSide(Side.None);
+          setEdge(Edge.None);
         }
       }
     }
@@ -68,7 +68,7 @@ function useSide(
     };
   }, []);
 
-  return side;
+  return edge;
 }
 
-export { useSide, Side };
+export { useEdge, Edge };
