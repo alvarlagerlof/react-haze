@@ -10,12 +10,7 @@ build({
   sourcemap: true,
   format: "esm",
   outdir: "dist",
-  external: [
-    "react",
-    "react-dom",
-    "/src/stories/style.css",
-    "/src/stories/Haze.stories.tsx",
-  ],
+  external: ["react", "react-dom", "/src/stories/*"],
   plugins: [vanillaExtractPlugin()],
   watch: args && args[0] === "watch",
 }).catch(() => process.exit(1));
