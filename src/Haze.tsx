@@ -1,47 +1,28 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { Ref } from "react";
+import { Side, useSide } from "./useSide";
 
 //import * as styles from "./Haze.css";
 
 type HazeProps = {
   orientation: "vertical" | "horizontal";
+  offset: number;
+  scrollContainer: Ref<HTMLElement>;
   children: React.ReactNode;
 };
 
-export default function Haze({ orientation, children }: HazeProps) {
-  const refElement = useRef<HTMLDivElement>(null);
-
-  const [x, setX] = useState<number>(0);
-  const [y, setY] = useState<number>(0);
-
-  useLayoutEffect(() => {
-    const element = refElement.current;
-
-    function onScroll(event: any): any {
-      console.log("scoll", event);
-      setX(element?.scrollLeft as number);
-      // setX(event.target.scrollLeft);
-      // setY(event.target.scrollTop);
-    }
-
-    if (element !== null) {
-      console.log("add scroll listner", element);
-      element.addEventListener("scroll", onScroll, { passive: true });
-    }
-
-    return () => {
-      if (element !== null) {
-        console.log("remove scroll listner");
-        element.removeEventListener("scroll", onScroll);
-      }
-    };
-  }, []);
+export default function Haze({
+  orientation,
+  offset,
+  scrollContainer,
+  children,
+}: HazeProps) {
+  const side: Side = useSide(orientation, offset, scrollContainer);
 
   return (
     <>
       <div>
         <p>Haze that is: {orientation}</p>
-        <p>x: {x}</p>
-        <p>y: {y}</p>
+        <p>Side: {Side[side].toString()}</p>
       </div>
 
       <>{children}</>
