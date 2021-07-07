@@ -29,10 +29,8 @@ export default {
 } as ComponentMeta<typeof Haze>;
 
 export const Horizontal: ComponentStory<typeof Haze> = (args) => {
-  const ref = useRef(null);
-
   return (
-    <Haze {...args} scrollContainer={ref}>
+    <Haze {...args}>
       <ul
         ref={ref}
         style={{
@@ -56,10 +54,8 @@ Horizontal.args = {
 };
 
 export const Vertical: ComponentStory<typeof Haze> = (args) => {
-  const ref = useRef(null);
-
   return (
-    <Haze {...args} scrollContainer={ref}>
+    <Haze {...args}>
       <ul
         ref={ref}
         style={{
