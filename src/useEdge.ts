@@ -11,7 +11,7 @@ function useEdge(
   offset: number,
   element: Ref<HTMLElement>
 ) {
-  const [edge, setEdge] = useState<Edge>(Edge.Start);
+  const [edge, setEdge] = useState<Edge>(Edge.End);
 
   useLayoutEffect(() => {
     // @ts-expect-error: ugh

@@ -1,7 +1,7 @@
 import React from "react";
 import { createInlineTheme } from "@vanilla-extract/dynamic";
 
-import { Edge, useEdge } from "./useEdge";
+import { useEdge } from "./useEdge";
 
 import * as styles from "./Haze.css";
 
@@ -24,7 +24,7 @@ export default function Haze({
 
   const customTheme = createInlineTheme(styles.vars, {
     color: color,
-    orientation: orientation === "vertical" ? "0deg" : "90deg",
+    orientation: orientation === "horizontal" ? "90deg" : "180deg",
   });
 
   return (
