@@ -38,4 +38,9 @@ function Vertical() {
   );
 }
 
-export { Horizontal, Vertical };
+const List = {
+  Horizontal,
+  Vertical,
+};
+
+export default List;

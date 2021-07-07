@@ -57,12 +57,12 @@ function useEdge(
       }
     }
 
-    if (element !== null) {
+    if (current !== null) {
       current.addEventListener("scroll", onScroll, { passive: true });
     }
 
     return () => {
-      if (element !== null) {
+      if (current !== null) {
         current.removeEventListener("scroll", onScroll);
       }
     };

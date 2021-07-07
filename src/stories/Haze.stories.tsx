@@ -4,9 +4,12 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Haze from "../../";
 import "../../dist/index.css";
 
-import { List } from "./List";
+import List from "./example/List";
 
 import "./style.css";
+
+import places from "./example/places";
+import PlaceCard from "./example/PlaceCard";
 
 export default {
   title: "Example/Haze",
@@ -29,8 +32,23 @@ export default {
 
 export const Horizontal: ComponentStory<typeof Haze> = (args) => {
   return (
+    // <Haze {...args}>
+    //   <List.Horizontal />
+    // </Haze>
     <Haze {...args}>
-      <List.Horizontal />
+      <ul
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          gap: "16px",
+          overflowX: "scroll",
+          padding: "16px",
+        }}
+      >
+        {places.map((place) => (
+          <PlaceCard key={place.title} {...place} />
+        ))}
+      </ul>
     </Haze>
   );
 };

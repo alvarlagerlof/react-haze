@@ -1,7 +1,7 @@
 import React from "react";
 import { createInlineTheme } from "@vanilla-extract/dynamic";
 
-import ScrollContainer from "./ScollContainer";
+import ScrollContainer from "./ScrollContainer";
 
 import * as styles from "./style.css";
 
