@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { createInlineTheme } from "@vanilla-extract/dynamic";
 
 import { Children, Color, Orientation } from "../types";
 
 import * as styles from "../style.css";
-import { useMode, Mode } from "../hooks/useMode";
-import { StyleRule } from "@vanilla-extract/css";
 
 type RelativeProps = Orientation & Color & Children;
 
