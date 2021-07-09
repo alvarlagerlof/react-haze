@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 
 import { Children, Offset, Orientation } from "../types";
 import { useEdge } from "../hooks/useEdge";
+import { useMode, Mode } from "../hooks/useMode";
 
 import * as styles from "../style.css";
 
@@ -14,9 +15,9 @@ export default function CloneContainer({
 }: ContainerProps) {
   const element = useRef(null);
   const edge = useEdge(orientation, offset, element);
-  const mode = typeof children.type === "function" ? "wrap" : "clone";
+  const mode = useMode(children);
 
-  if (mode == "clone") {
+  if (mode == Mode.Wrap) {
     return React.cloneElement(children, {
       className: styles.fade[edge],
       ref: element,
