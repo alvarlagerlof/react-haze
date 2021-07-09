@@ -10,7 +10,7 @@ function useEdge(
   orientation: "vertical" | "horizontal",
   offset: number,
   element: Ref<HTMLElement>
-) {
+): Edge {
   const [edge, setEdge] = useState<Edge>(Edge.End);
 
   useLayoutEffect(() => {
