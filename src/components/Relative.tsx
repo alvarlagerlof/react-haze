@@ -4,6 +4,8 @@ import { createInlineTheme } from "@vanilla-extract/dynamic";
 import { Children, Color, Orientation } from "../types";
 
 import * as styles from "../style.css";
+import { useMode, Mode } from "../hooks/useMode";
+import { StyleRule } from "@vanilla-extract/css";
 
 type RelativeProps = Orientation & Color & Children;
 
@@ -13,8 +15,12 @@ export default function Relative({
   children,
 }: RelativeProps) {
   const customTheme = createInlineTheme(styles.vars, {
-    color: color,
-    orientation: orientation === "horizontal" ? "90deg" : "180deg",
+    color,
+    rotation: orientation === "horizontal" ? "90deg" : "180deg",
+    width: orientation === "horizontal" ? "100%" : "unset",
+    height: orientation === "vertical" ? "100%" : "unset",
+    overflowX: orientation === "horizontal" ? "scroll" : "unset",
+    overflowY: orientation === "vertical" ? "scroll" : "unset",
   });
 
   return (

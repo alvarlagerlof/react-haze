@@ -39,7 +39,6 @@ export const Horizontal: ComponentStory<typeof Haze> = (args) => {
           display: "flex",
           flexDirection: "row",
           gap: "16px",
-          overflowX: "scroll",
           padding: "16px",
         }}
       >
@@ -64,7 +63,6 @@ export const Vertical: ComponentStory<typeof Haze> = (args) => {
           display: "flex",
           flexDirection: "column",
           gap: "16px",
-          overflowY: "scroll",
           height: "100vh",
           padding: "16px",
         }}
