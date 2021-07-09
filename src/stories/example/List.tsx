@@ -8,7 +8,6 @@ function Horizontal() {
         display: "flex",
         flexDirection: "row",
         gap: "16px",
-        overflowX: "scroll",
         padding: "16px",
       }}
     >
@@ -26,7 +25,6 @@ function Vertical() {
         display: "flex",
         flexDirection: "column",
         gap: "16px",
-        overflowY: "scroll",
         height: "100vh",
         padding: "16px",
       }}

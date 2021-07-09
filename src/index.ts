@@ -1,3 +1,3 @@
-import Haze from "./Haze";
+import Haze from "./components/Haze";
 
 export default Haze;

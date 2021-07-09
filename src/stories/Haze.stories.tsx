@@ -32,11 +32,9 @@ export default {
 
 export const Horizontal: ComponentStory<typeof Haze> = (args) => {
   return (
-    // <Haze {...args}>
-    //   <List.Horizontal />
-    // </Haze>
     <Haze {...args}>
-      <ul
+      <List.Horizontal />
+      {/* <ul
         style={{
           display: "flex",
           flexDirection: "row",
@@ -48,7 +46,7 @@ export const Horizontal: ComponentStory<typeof Haze> = (args) => {
         {places.map((place) => (
           <PlaceCard key={place.title} {...place} />
         ))}
-      </ul>
+      </ul> */}
     </Haze>
   );
 };
@@ -60,7 +58,21 @@ Horizontal.args = {
 export const Vertical: ComponentStory<typeof Haze> = (args) => {
   return (
     <Haze {...args}>
-      <List.Vertical />
+      {/* <List.Vertical /> */}
+      <ul
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "16px",
+          overflowY: "scroll",
+          height: "100vh",
+          padding: "16px",
+        }}
+      >
+        {places.map((place) => (
+          <PlaceCard key={place.title} {...place} />
+        ))}
+      </ul>
     </Haze>
   );
 };

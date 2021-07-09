@@ -1,5 +1,5 @@
 import { createVar, style, styleVariants } from "@vanilla-extract/css";
-import { Edge } from "./useEdge";
+import { Edge } from "./hooks/useEdge";
 
 const color = createVar();
 const orientation = createVar();
