@@ -6,7 +6,8 @@ import {
 } from "@vanilla-extract/css";
 import { Edge } from "./hooks/useEdge";
 
-const color = createVar();
+const colorSolid = createVar();
+const colorTransparent = createVar();
 const rotation = createVar();
 const width = createVar();
 const height = createVar();
@@ -14,7 +15,8 @@ const overflowX = createVar();
 const overflowY = createVar();
 
 export const vars = {
-  color,
+  colorSolid,
+  colorTransparent,
   rotation,
   width,
   height,
@@ -53,10 +55,10 @@ export const fade = styleVariants({
       background: `
         linear-gradient(
           ${rotation}, 
-          ${color} 0%, 
-          rgba(242, 242, 242, 0) 20%, 
-          rgba(242, 242, 242, 0) 80%, 
-          rgba(242, 242, 242, 0) 100%
+          ${colorSolid} 0%, 
+          ${colorTransparent} 20%, 
+          ${colorTransparent} 80%, 
+          ${colorTransparent} 100%
         );
       `,
     },
@@ -68,10 +70,10 @@ export const fade = styleVariants({
       background: `
         linear-gradient(
           ${rotation}, 
-          rgba(242, 242, 242, 0) 0%, 
-          rgba(242, 242, 242, 0) 20%, 
-          rgba(242, 242, 242, 0) 80%, 
-          ${color} 100%
+          ${colorTransparent} 0%, 
+          ${colorTransparent} 20%, 
+          ${colorTransparent} 80%, 
+          ${colorSolid} 100%
         );
       `,
     },
@@ -83,10 +85,10 @@ export const fade = styleVariants({
       background: `
         linear-gradient(
           ${rotation}, 
-          ${color} 0%, 
-          rgba(242, 242, 242, 0) 20%, 
-          rgba(242, 242, 242, 0) 80%, 
-          ${color} 100%
+          ${colorSolid} 0%, 
+          ${colorTransparent} 20%, 
+          ${colorTransparent} 80%, 
+          ${colorSolid} 100%
         );
       `,
     },
