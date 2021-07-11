@@ -1,17 +1,17 @@
 import { Ref, useLayoutEffect, useState } from "react";
 
-enum Edge {
-  Start,
-  End,
-  Both,
-}
+type ReturnType = {
+  start: boolean;
+  end: boolean;
+};
 
 function useEdge(
   orientation: "vertical" | "horizontal",
   offset: number,
   element: Ref<HTMLElement>
-): Edge {
-  const [edge, setEdge] = useState<Edge>(Edge.End);
+): ReturnType {
+  const [start, setStart] = useState<boolean>(false);
+  const [end, setEnd] = useState<boolean>(true);
 
   useLayoutEffect(() => {
     // @ts-expect-error: ugh
@@ -28,13 +28,16 @@ function useEdge(
         };
 
         if (from.start > offset) {
-          setEdge(Edge.Start);
+          setEnd(false);
+          setStart(true);
         }
         if (from.end > offset) {
-          setEdge(Edge.End);
+          setStart(false);
+          setEnd(true);
         }
         if (from.start > offset && from.end > offset) {
-          setEdge(Edge.Both);
+          setStart(true);
+          setEnd(true);
         }
       } else if (orientation == "vertical") {
         const from = {
@@ -46,13 +49,16 @@ function useEdge(
         };
 
         if (from.start > offset) {
-          setEdge(Edge.Start);
+          setEnd(false);
+          setStart(true);
         }
         if (from.end > offset) {
-          setEdge(Edge.End);
+          setStart(false);
+          setEnd(true);
         }
         if (from.start > offset && from.end > offset) {
-          setEdge(Edge.Both);
+          setStart(true);
+          setEnd(true);
         }
       }
     }
@@ -68,7 +74,7 @@ function useEdge(
     };
   }, []);
 
-  return edge;
+  return { start, end };
 }
 
-export { useEdge, Edge };
+export default useEdge;
