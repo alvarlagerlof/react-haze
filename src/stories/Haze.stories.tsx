@@ -8,9 +8,6 @@ import List from "./example/List";
 
 import "./style.css";
 
-import places from "./example/places";
-import PlaceCard from "./example/PlaceCard";
-
 export default {
   title: "Example/Haze",
   component: Haze,
@@ -27,6 +24,10 @@ export default {
       control: { type: "number" },
       defaultValue: 20,
     },
+    gradientSize: {
+      control: { type: "text" },
+      defaultValue: "100px",
+    },
   },
 } as ComponentMeta<typeof Haze>;
 
@@ -34,18 +35,6 @@ export const Horizontal: ComponentStory<typeof Haze> = (args) => {
   return (
     <Haze {...args}>
       <List.Horizontal />
-      {/* <ul
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          gap: "16px",
-          padding: "16px",
-        }}
-      >
-        {places.map((place) => (
-          <PlaceCard key={place.title} {...place} />
-        ))}
-      </ul> */}
     </Haze>
   );
 };
@@ -57,20 +46,7 @@ Horizontal.args = {
 export const Vertical: ComponentStory<typeof Haze> = (args) => {
   return (
     <Haze {...args}>
-      {/* <List.Vertical /> */}
-      <ul
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "16px",
-          height: "100vh",
-          padding: "16px",
-        }}
-      >
-        {places.map((place) => (
-          <PlaceCard key={place.title} {...place} />
-        ))}
-      </ul>
+      <List.Vertical />
     </Haze>
   );
 };

@@ -2,35 +2,34 @@ import React, { useRef } from "react";
 import { createInlineTheme } from "@vanilla-extract/dynamic";
 import { default as ColorFun } from "color";
 
-import { Children, Color, Offset, Orientation } from "../types";
+import { Children, Color, Offset, GradientSize, Orientation } from "../types";
 
 import useEdge from "../hooks/useEdge";
 
 import * as styles from "../style.css";
 
-type HazeProps = Orientation & Offset & Color & Children;
+type HazeProps = Orientation & Offset & Color & GradientSize & Children;
 
 export default function Haze({
   orientation,
   offset,
   color,
+  gradientSize,
   children,
 }: HazeProps) {
   const element = useRef(null);
   const { start, end } = useEdge(orientation, offset, element);
 
   const customTheme = createInlineTheme(styles.vars, {
-    colorSolid: color,
-    colorTransparent: ColorFun(color).alpha(0).toString(),
-    rotation: orientation === "horizontal" ? "90deg" : "180deg",
-    width: orientation === "horizontal" ? "100%" : "unset",
-    height: orientation === "vertical" ? "100%" : "unset",
-    overflowX: orientation === "horizontal" ? "scroll" : "unset",
-    overflowY: orientation === "vertical" ? "scroll" : "unset",
-    gradientSize: "100px",
-    overlayDirection: orientation === "horizontal" ? "row" : "column",
-    overlayWidth: orientation === "horizontal" ? "50%" : "100%",
-    overlayHeight: orientation === "horizontal" ? "100%" : "50%",
+    scrollContainerOverflowX: orientation === "horizontal" ? "scroll" : "unset",
+    scrollContainerOverflowY: orientation === "vertical" ? "scroll" : "unset",
+    overlayFlexDirection: orientation === "horizontal" ? "row" : "column",
+    overlayPartRotation: orientation === "horizontal" ? "90deg" : "180deg",
+    overlayPartWidth: orientation === "horizontal" ? "50%" : "100%",
+    overlayPartHeight: orientation === "vertical" ? "100%" : "unset",
+    overlayPartColorSolid: color,
+    overlayPartColorTransparent: ColorFun(color).alpha(0).toString(),
+    overlayPartGradientSize: gradientSize,
   });
 
   return (

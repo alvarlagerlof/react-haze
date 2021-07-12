@@ -4,32 +4,27 @@ import {
   styleVariants,
   StyleRule,
 } from "@vanilla-extract/css";
-import { Edge } from "./hooks/useEdge";
 
-const colorSolid = createVar();
-const colorTransparent = createVar();
-const rotation = createVar();
-const width = createVar();
-const height = createVar();
-const overflowX = createVar();
-const overflowY = createVar();
-const gradientSize = createVar();
-const overlayDirection = createVar();
-const overlayWidth = createVar();
-const overlayHeight = createVar();
+const scrollContainerOverflowX = createVar();
+const scrollContainerOverflowY = createVar();
+const overlayFlexDirection = createVar();
+const overlayPartRotation = createVar();
+const overlayPartWidth = createVar();
+const overlayPartHeight = createVar();
+const overlayPartColorSolid = createVar();
+const overlayPartColorTransparent = createVar();
+const overlayPartGradientSize = createVar();
 
 export const vars = {
-  colorSolid,
-  colorTransparent,
-  rotation,
-  width,
-  height,
-  overflowX,
-  overflowY,
-  gradientSize,
-  overlayDirection,
-  overlayWidth,
-  overlayHeight,
+  scrollContainerOverflowX,
+  scrollContainerOverflowY,
+  overlayFlexDirection,
+  overlayPartRotation,
+  overlayPartWidth,
+  overlayPartHeight,
+  overlayPartColorSolid,
+  overlayPartColorTransparent,
+  overlayPartGradientSize,
 };
 
 export const relative = style({
@@ -43,30 +38,29 @@ export const overlay = style({
   width: "100%",
   height: "100%",
   display: "flex",
-  flexDirection: overlayDirection,
+  flexDirection: overlayFlexDirection,
   pointerEvents: "none",
 });
 
 export const scrollContainer = style({
-  overflowX: overflowX,
-  overflowY: overflowY,
+  overflowX: scrollContainerOverflowX,
+  overflowY: scrollContainerOverflowY,
 });
 
 const sideBase: StyleRule = {
-  width: overlayWidth,
-  height: overlayHeight,
+  width: overlayPartWidth,
+  height: overlayPartHeight,
   opacity: 0,
   transition: "all 300ms ease-in-out",
-  transform: "translateX(0%)",
 };
 
 const gradientStart: StyleRule = {
   background: `
   linear-gradient(
-    ${rotation},
-    ${colorSolid} 0%,
-    ${colorTransparent} 50%,
-    ${colorTransparent} 100%
+    ${overlayPartRotation},
+    ${overlayPartColorSolid} 0%,
+    ${overlayPartColorTransparent} ${overlayPartGradientSize},
+    ${overlayPartColorTransparent} 100%
   );
 `,
 };
@@ -74,10 +68,10 @@ const gradientStart: StyleRule = {
 const gradientEnd: StyleRule = {
   background: `
   linear-gradient(
-    ${rotation},
-    ${colorTransparent} 0%,
-    ${colorTransparent} 50%,
-    ${colorSolid} 100%
+    ${overlayPartRotation},
+    ${overlayPartColorTransparent} 0%,
+    ${overlayPartColorTransparent} calc(100% - ${overlayPartGradientSize}),
+    ${overlayPartColorSolid} 100%
   );
 `,
 };
@@ -102,17 +96,3 @@ export const end = styleVariants({
     ...gradientEnd,
   },
 });
-
-const base: StyleRule = {
-  content: `""`,
-  position: "absolute",
-  zIndex: 1,
-  top: 0,
-  bottom: 0,
-  right: 0,
-  left: 0,
-  pointerEvents: "none",
-  marginTop: "20px",
-  width: width,
-  height: height,
-};
