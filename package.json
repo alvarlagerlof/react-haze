@@ -1,6 +1,6 @@
 {
   "name": "react-haze",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Easily show a fade at edges of lists to indicate scrollability",
   "repository": {
     "type": "git",
@@ -10,6 +10,7 @@
     "dist"
   ],
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "typescript": "tsc --noEmit",
