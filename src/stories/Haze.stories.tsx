@@ -14,7 +14,7 @@ export default {
   argTypes: {
     color: {
       control: { type: "color" },
-      defaultValue: "red",
+      defaultValue: "rgb(255, 254, 249)",
     },
     orientation: {
       control: { type: "select" },
