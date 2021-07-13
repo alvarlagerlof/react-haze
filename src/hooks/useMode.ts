@@ -1,5 +1,3 @@
-import { Children } from "../types";
-
 enum Mode {
   Wrap,
   Clone,

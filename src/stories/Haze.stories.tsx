@@ -25,7 +25,7 @@ export default {
       defaultValue: 20,
     },
     gradientSize: {
-      control: { type: "text" },
+      control: { type: "string" },
       defaultValue: "100px",
     },
   },
