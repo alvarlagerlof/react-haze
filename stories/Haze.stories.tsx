@@ -8,17 +8,17 @@ export default {
   title: "Example/Haze",
   component: Haze,
   argTypes: {
-    color: {
-      control: { type: "color" },
-      defaultValue: "rgb(255, 254, 249)",
-    },
     orientation: {
       control: { type: "select" },
       options: ["horizontal", "vertical"],
     },
-    offset: {
+    scrollOffset: {
       control: { type: "number" },
       defaultValue: 20,
+    },
+    gradientColor: {
+      control: { type: "color" },
+      defaultValue: "rgb(255, 254, 249)",
     },
     gradientSize: {
       control: { type: "string" },

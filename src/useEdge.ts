@@ -1,4 +1,6 @@
-import { Ref, useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
+
+import { element, orientation, scrollOffset } from "./types";
 
 type ReturnType = {
   start: boolean;
@@ -6,9 +8,9 @@ type ReturnType = {
 };
 
 function useEdge(
-  orientation: "vertical" | "horizontal",
-  offset: number,
-  element: Ref<HTMLElement>
+  orientation: orientation,
+  scrollOffset: scrollOffset,
+  element: element
 ): ReturnType {
   const [start, setStart] = useState<boolean>(false);
   const [end, setEnd] = useState<boolean>(true);
@@ -27,15 +29,15 @@ function useEdge(
             event.target.clientWidth,
         };
 
-        if (from.start > offset) {
+        if (from.start > scrollOffset) {
           setEnd(false);
           setStart(true);
         }
-        if (from.end > offset) {
+        if (from.end > scrollOffset) {
           setStart(false);
           setEnd(true);
         }
-        if (from.start > offset && from.end > offset) {
+        if (from.start > scrollOffset && from.end > scrollOffset) {
           setStart(true);
           setEnd(true);
         }
@@ -48,15 +50,15 @@ function useEdge(
             event.target.clientHeight,
         };
 
-        if (from.start > offset) {
+        if (from.start > scrollOffset) {
           setEnd(false);
           setStart(true);
         }
-        if (from.end > offset) {
+        if (from.end > scrollOffset) {
           setStart(false);
           setEnd(true);
         }
-        if (from.start > offset && from.end > offset) {
+        if (from.start > scrollOffset && from.end > scrollOffset) {
           setStart(true);
           setEnd(true);
         }

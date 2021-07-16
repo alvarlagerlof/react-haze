@@ -11,9 +11,9 @@ const App = () => {
     <div>
       <Haze
         orientation="horizontal"
+        scrollOffset={20}
         gradientSize="50px"
-        offset={20}
-        color="rgb(255, 254, 249)"
+        gradientColor="rgb(255, 254, 249)"
       >
         <List.Horizontal />
       </Haze>
