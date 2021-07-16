@@ -2,11 +2,11 @@ import React, { useRef } from "react";
 import { createInlineTheme } from "@vanilla-extract/dynamic";
 import { default as ColorFun } from "color";
 
-import { Children, Color, Offset, GradientSize, Orientation } from "../types";
+import { Children, Color, Offset, GradientSize, Orientation } from "./types";
 
-import useEdge from "../hooks/useEdge";
+import useEdge from "./useEdge";
 
-import * as styles from "../style.css";
+import * as styles from "./style.css";
 
 type HazeProps = Orientation & Offset & Color & GradientSize & Children;
 
