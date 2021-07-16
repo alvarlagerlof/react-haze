@@ -31,8 +31,8 @@ export default function Haze({
   const { start, end } = useEdge(orientation, scrollOffset, element);
 
   const customTheme = createInlineTheme(styles.vars, {
-    scrollContainerOverflowX: orientation === "horizontal" ? "scroll" : "unset",
-    scrollContainerOverflowY: orientation === "vertical" ? "scroll" : "unset",
+    scrollContainerOverflowX: orientation === "horizontal" ? "scroll" : "none",
+    scrollContainerOverflowY: orientation === "vertical" ? "scroll" : "none",
     overlayFlexDirection: orientation === "horizontal" ? "row" : "column",
     overlayPartRotation: orientation === "horizontal" ? "90deg" : "180deg",
     overlayPartWidth: orientation === "horizontal" ? "50%" : "100%",
