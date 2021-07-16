@@ -13,8 +13,8 @@ Easily show a fade at edges of lists to indicate scrollability
 Install with npm or yarn
 
 ```bash
-  npm install react-haze
-  yarn add react-haze
+npm install react-haze
+yarn add react-haze
 ```
 
 Import the `Haze` component
