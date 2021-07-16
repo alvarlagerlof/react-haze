@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: "npm" # Use npm for the package ecosystem
+    directory: "/" # Location of package manifests (package.json, package-lock.json)
+    schedule:
+      interval: "weekly"
