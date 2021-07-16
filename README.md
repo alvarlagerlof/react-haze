@@ -36,6 +36,10 @@ Wrap a **non-scrolling container** with the haze component and choose props acco
 </Haze>
 ```
 
+## Demo
+
+There is a CodeSandBox demo [here](https://codesandbox.io/s/react-haze-0pd2u?file=/src/App.js)
+
 ## License
 
 [MIT](LICENSE)
