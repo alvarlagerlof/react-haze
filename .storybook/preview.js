@@ -1,15 +1,7 @@
-import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
+// https://storybook.js.org/docs/react/writing-stories/parameters#global-parameters
+import './style.css';
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-  viewport: {
-    viewports: MINIMAL_VIEWPORTS,
-  },
-  layout: "fullscreen",
+  // https://storybook.js.org/docs/react/essentials/actions#automatically-matching-args
+  actions: { argTypesRegex: '^on.*' },
 };
