@@ -17,6 +17,7 @@ If you have been assigned to fix an issue or develop a new feature, please follo
 - Link `react-haze` locally by running `yarn link`
 - Auto-build files as you edit by running `yarn start`
 - Implement your changes and tests to files in the `src/` directory and corresponding test files
+- Make sure that your code is formatted by Prettier
 - To run examples, follow their individual directions. Usually this is just `yarn && yarn start`.
 - To run examples using your local build, link to the local `react-haze` by running `yarn link react-haze` from the example's directory
 - Git stage your required changes and commit (see below commit guidelines)
