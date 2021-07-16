@@ -16,9 +16,11 @@
     "scheduler/tracing": "../node_modules/scheduler/tracing-profiling"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.8.4",
     "parcel": "^1.12.3",
-    "typescript": "^3.4.5"
+    "typescript": "^3.4.5",
+    "parcel-bundler": "1.12.5"
   }
 }

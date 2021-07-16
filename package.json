@@ -1,11 +1,22 @@
 {
   "version": "0.0.4",
+  "name": "react-haze",
+  "author": "Alvar Lagerlöf",
   "description": "Easily show a fade at edges of lists to indicate scrollability",
   "repository": {
     "type": "git",
     "url": "https://github.com/alvarlagerlof/react-haze"
   },
   "license": "MIT",
+  "keywords": [
+    "react",
+    "list",
+    "scroll",
+    "responsive",
+    "haze",
+    "fog",
+    "mist"
+  ],
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -34,23 +45,6 @@
       "pre-commit": "tsdx lint"
     }
   },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "name": "react-haze",
-  "author": "Alvar Lagerlöf",
-  "keywords": [
-    "react",
-    "list",
-    "scroll",
-    "responsive",
-    "haze",
-    "fog",
-    "mist"
-  ],
   "module": "dist/react-haze.esm.js",
   "size-limit": [
     {

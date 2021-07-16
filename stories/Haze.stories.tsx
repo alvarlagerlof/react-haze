@@ -1,28 +1,28 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Haze from '../src';
+import React from "react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
+import Haze from "../src";
 
-import List from './List';
+import List from "../showcase/List";
 
 export default {
-  title: 'Example/Haze',
+  title: "Example/Haze",
   component: Haze,
   argTypes: {
     color: {
-      control: { type: 'color' },
-      defaultValue: 'rgb(255, 254, 249)',
+      control: { type: "color" },
+      defaultValue: "rgb(255, 254, 249)",
     },
     orientation: {
-      control: { type: 'select' },
-      options: ['horizontal', 'vertical'],
+      control: { type: "select" },
+      options: ["horizontal", "vertical"],
     },
     offset: {
-      control: { type: 'number' },
+      control: { type: "number" },
       defaultValue: 20,
     },
     gradientSize: {
-      control: { type: 'string' },
-      defaultValue: '100px',
+      control: { type: "string" },
+      defaultValue: "100px",
     },
   },
 } as ComponentMeta<typeof Haze>;
@@ -36,7 +36,7 @@ export const Horizontal: ComponentStory<typeof Haze> = (args) => {
 };
 
 Horizontal.args = {
-  orientation: 'horizontal',
+  orientation: "horizontal",
 };
 
 export const Vertical: ComponentStory<typeof Haze> = (args) => {
@@ -48,5 +48,5 @@ export const Vertical: ComponentStory<typeof Haze> = (args) => {
 };
 
 Vertical.args = {
-  orientation: 'vertical',
+  orientation: "vertical",
 };
