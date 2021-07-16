@@ -4401,6 +4401,11 @@ react-app-polyfill@^1.0.0:
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
 
+react-haze@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-haze/-/react-haze-1.1.0.tgz#f60de6cfd100e52ac013ea228497face0dcf83e8"
+  integrity sha512-fn83MNFrQB2sT5qXu7dNi7hWCA7M3X4fw3ds+Yfqh6kRmeJvNTxpBXwlOz18rYS0N+yV0C3lWqceoPcQnpVmrQ==
+
 readable-stream@^2.0.2, readable-stream@^2.2.2, readable-stream@^2.3.3, readable-stream@^2.3.6, readable-stream@~2.3.3, readable-stream@~2.3.6:
   version "2.3.7"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.7.tgz#1eca1cf711aef814c04f62252a36a62f6cb23b57"
