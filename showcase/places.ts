@@ -18,7 +18,7 @@ const places: Place[] = [
   {
     imageUrl:
       "https://images.unsplash.com/photo-1523365154888-8a758819b722?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1949&q=80",
-    title: "Sciciliy",
+    title: "Siciliy",
     description:
       "Adipisicing cupidatat esse aliquip mollit aliqua eu dolore aute cillum cupidatat qui aute.",
   },
