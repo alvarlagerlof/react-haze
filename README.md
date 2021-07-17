@@ -29,7 +29,7 @@ Wrap a **non-scrolling container** with the haze component and choose props acco
 <Haze
   orientation="horizontal"
   scrollOffset={20}
-  gradientSize="50px"
+  gradientSize={50}
   gradientColor="rgb(255, 254, 249)"
 >
   {/* You content goes here */}

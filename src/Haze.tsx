@@ -6,7 +6,7 @@ import {
   orientation,
   scrollOffset,
   gradientSize,
-  gradeintColor,
+  gradientColor,
   children,
 } from "./types";
 
@@ -23,7 +23,7 @@ export default function Haze({
 }: {
   orientation: orientation;
   scrollOffset: scrollOffset;
-  gradientColor: gradeintColor;
+  gradientColor: gradientColor;
   gradientSize: gradientSize;
   children: children;
 }) {
@@ -39,7 +39,7 @@ export default function Haze({
     overlayPartHeight: orientation === "vertical" ? "100%" : "unset",
     overlayPartColorSolid: gradientColor,
     overlayPartColorTransparent: ColorFun(gradientColor).alpha(0).toString(),
-    overlayPartGradientSize: gradientSize,
+    overlayPartGradientSize: `${gradientSize}px`,
   });
 
   return (

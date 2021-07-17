@@ -21,8 +21,8 @@ export default {
       defaultValue: "rgb(255, 254, 249)",
     },
     gradientSize: {
-      control: { type: "string" },
-      defaultValue: "100px",
+      control: { type: "number" },
+      defaultValue: 100,
     },
   },
 } as ComponentMeta<typeof Haze>;
