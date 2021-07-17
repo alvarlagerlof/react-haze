@@ -1,3 +1,5 @@
+![Logo](banner.jpg)
+
 # React Haze
 
 Easily show a fade at edges of lists to indicate scrollability
