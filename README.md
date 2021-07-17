@@ -1,4 +1,4 @@
-![Logo](banner.jpg)
+![Logo](banner.png)
 
 # React Haze
 
