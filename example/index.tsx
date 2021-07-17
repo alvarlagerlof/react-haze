@@ -12,7 +12,7 @@ const App = () => {
       <Haze
         orientation="horizontal"
         scrollOffset={20}
-        gradientSize="50px"
+        gradientSize={50}
         gradientColor="rgb(255, 254, 249)"
       >
         <List.Horizontal />

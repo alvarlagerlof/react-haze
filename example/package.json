@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "react-app-polyfill": "^1.0.0",
-    "react-haze": "^1.1.0"
+    "react-haze": "^2.0.0"
   },
   "alias": {
     "react": "../node_modules/react",
