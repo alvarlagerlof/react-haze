@@ -19,7 +19,7 @@ function useEdge(
     // @ts-expect-error: ugh
     const current = element?.current;
 
-    function calculateEdges(event: any): void {
+    function calculateEdges(): void {
       if (orientation == "horizontal") {
         const from = {
           start: current.scrollLeft,
