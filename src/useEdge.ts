@@ -20,8 +20,6 @@ function useEdge(
     const current = element?.current;
 
     function calculateEdges(event: any): void {
-      console.log("run");
-
       if (orientation == "horizontal") {
         const from = {
           start: current.scrollLeft,
