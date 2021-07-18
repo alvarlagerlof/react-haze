@@ -19,14 +19,13 @@ function useEdge(
     // @ts-expect-error: ugh
     const current = element?.current;
 
-    function onScroll(event: any): void {
+    function calculateEdges(event: any): void {
+      console.log("run");
+
       if (orientation == "horizontal") {
         const from = {
-          start: event.target.scrollLeft,
-          end:
-            event.target.scrollWidth -
-            event.target.scrollLeft -
-            event.target.clientWidth,
+          start: current.scrollLeft,
+          end: current.scrollWidth - current.scrollLeft - current.clientWidth,
         };
 
         if (from.start > scrollOffset) {
@@ -43,11 +42,8 @@ function useEdge(
         }
       } else if (orientation == "vertical") {
         const from = {
-          start: event.target.scrollTop,
-          end:
-            event.target.scrollHeight -
-            event.target.scrollTop -
-            event.target.clientHeight,
+          start: current.scrollTop,
+          end: current.scrollHeight - current.scrollTop - current.clientHeight,
         };
 
         if (from.start > scrollOffset) {
@@ -66,12 +62,14 @@ function useEdge(
     }
 
     if (current !== null) {
-      current.addEventListener("scroll", onScroll, { passive: true });
+      current.addEventListener("scroll", calculateEdges, { passive: true });
+      window.addEventListener("resize", calculateEdges, { passive: true });
     }
 
     return () => {
       if (current !== null) {
-        current.removeEventListener("scroll", onScroll);
+        current.removeEventListener("scroll", calculateEdges);
+        window.removeEventListener("resize", calculateEdges);
       }
     };
   }, []);
