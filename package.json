@@ -61,7 +61,7 @@
   "dependencies": {
     "@vanilla-extract/dynamic": "^1.0.0",
     "@vanilla-extract/css": "^1.1.1",
-    "color": "^3.1.3"
+    "color": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
