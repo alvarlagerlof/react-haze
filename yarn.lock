@@ -3327,9 +3327,9 @@
     "@vanilla-extract/integration" "^1.0.0"
 
 "@vanilla-extract/css@^1.0.0", "@vanilla-extract/css@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@vanilla-extract/css/-/css-1.1.1.tgz#353a330434b8975f38bf4ddaa49ba2332491c272"
-  integrity sha512-5dzFpruVkWAvm7bYMPFeH0MRcqbNNDBzLatYyfTRPLksw1Oc9uOs9g1L0y18NRf5Gufps1XZ2uwwbT7uX79PYA==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/css/-/css-1.1.2.tgz#ce00e32a3cdb4adf19e3193c08652a95fc8a7b12"
+  integrity sha512-ZroX0o25EiRbcgsK/ul9AEq+zlZpyKRI/yrxlTzEnRtqjBuUsFP1U34rUApK13qzHKGjEtGAI17H73bkf6NACQ==
   dependencies:
     "@emotion/hash" "^0.8.0"
     "@vanilla-extract/private" "^1.0.1"
