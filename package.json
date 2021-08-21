@@ -59,20 +59,20 @@
     }
   ],
   "dependencies": {
-    "@vanilla-extract/dynamic": "^1.0.0",
     "@vanilla-extract/css": "^1.1.1",
+    "@vanilla-extract/dynamic": "^2.0.0",
     "color": "^4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
+    "@babel/core": "^7.15.0",
     "@size-limit/preset-small-lib": "^5.0.1",
     "@storybook/addon-essentials": "^6.3.4",
     "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^6.3.4",
     "@storybook/addons": "^6.3.4",
-    "@storybook/react": "^6.3.4",
+    "@storybook/react": "^6.3.7",
     "@types/color": "^3.0.2",
-    "@types/react": "^17.0.14",
+    "@types/react": "^17.0.18",
     "@types/react-dom": "^17.0.9",
     "@vanilla-extract/babel-plugin": "^1.0.0",
     "babel-loader": "^8.2.2",
