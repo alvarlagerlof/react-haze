@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { createInlineTheme } from "@vanilla-extract/dynamic";
+import { assignInlineVars } from "@vanilla-extract/dynamic";
 import { default as ColorFun } from "color";
 
 import {
@@ -30,7 +30,7 @@ export default function Haze({
   const element = useRef(null);
   const { start, end } = useEdge(orientation, scrollOffset, element);
 
-  const customTheme = createInlineTheme(styles.vars, {
+  const customTheme = assignInlineVars(styles.vars, {
     scrollContainerOverflowX: orientation === "horizontal" ? "scroll" : "none",
     scrollContainerOverflowY: orientation === "vertical" ? "scroll" : "none",
     overlayFlexDirection: orientation === "horizontal" ? "row" : "column",
