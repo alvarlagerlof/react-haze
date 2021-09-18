@@ -3497,9 +3497,9 @@
     "@vanilla-extract/integration" "^1.0.0"
 
 "@vanilla-extract/css@^1.1.1", "@vanilla-extract/css@^1.2.0":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@vanilla-extract/css/-/css-1.2.3.tgz#1db483f6a92a666d493cdce91feaed59fb37353c"
-  integrity sha512-khzCBgxHk8fYvTuHbQ349ewKhSQ9qwjUC8RPHM0287ZJubFQCL9wMv/a0+3aKbtUYN3rG5dLW5lGDXJE28tS+g==
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/css/-/css-1.6.0.tgz#9c89f49ff577a32cfd9f852ee1c54e3b49c06d3d"
+  integrity sha512-v95GmeMGtv0937s7XD8yZvl8qY5AVYbx7ZyKmYfe1lXDXgemItxGycCEPAd+3ys0iHJmw8Io7gahylwUkaNpvA==
   dependencies:
     "@emotion/hash" "^0.8.0"
     "@vanilla-extract/private" "^1.0.1"
@@ -3509,6 +3509,7 @@
     csstype "^3.0.7"
     dedent "^0.7.0"
     deep-object-diff "^1.1.0"
+    deepmerge "^4.2.2"
 
 "@vanilla-extract/dynamic@^2.0.0":
   version "2.0.0"
