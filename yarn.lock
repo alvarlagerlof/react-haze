@@ -3870,15 +3870,15 @@
     tsutils "^3.17.1"
 
 "@vanilla-extract/babel-plugin@^1.0.0":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@vanilla-extract/babel-plugin/-/babel-plugin-1.0.1.tgz#63323b4312295767b5da71fb0ff474a17f2714ea"
-  integrity sha512-D58DcjUDticrtbDWell+6MZp0BtdVHjnkuhvR2+gwxq998WhNVh35ElITGAGEpgvzOtApImM7H20zPn1xfeQlw==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/babel-plugin/-/babel-plugin-1.1.0.tgz#a6a9efa7f4f377e05b0754874f31b8b21ca292e0"
+  integrity sha512-gHNK9Il6FtZurDJ/x96jR4Y2HzdxzbdTDb6cGDTmSO6QP/1zE+2BJRMgvmCTPoS+mbm8pK0AgaBk9HIspRAgrQ==
   dependencies:
     "@babel/core" "^7.13.10"
     "@babel/template" "^7.12.13"
-    "@vanilla-extract/integration" "^1.0.0"
+    "@vanilla-extract/integration" "^1.4.0"
 
-"@vanilla-extract/css@^1.1.1", "@vanilla-extract/css@^1.2.0":
+"@vanilla-extract/css@^1.1.1", "@vanilla-extract/css@^1.5.0":
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/@vanilla-extract/css/-/css-1.6.1.tgz#39c3b58f2b5f1b728e901b059c5021b8769d5a99"
   integrity sha512-MTR8pHVV80/B4H37JqyUwC8GUwA6DMdClcjgrU98svLrnmWq2Y8BWox9OQAOovoOwGtZwkJhjTQUmPkK0D13Bw==
@@ -3900,12 +3900,12 @@
   dependencies:
     "@vanilla-extract/private" "^1.0.0"
 
-"@vanilla-extract/integration@^1.0.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@vanilla-extract/integration/-/integration-1.1.0.tgz#7a766608327ffad25896b8d509b9acae07ccbcbc"
-  integrity sha512-VzDodGcoPv8loAyqIPya+UuFOr2c6D4rJ4uhIe4hms94FXZ+0qxPOXvFs7PNamt83M1zkInIj+0kEAHFC1D1gg==
+"@vanilla-extract/integration@^1.4.0":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/integration/-/integration-1.4.1.tgz#698c69c7545542f67eb9180469029da2be85546b"
+  integrity sha512-LH+pHMvjpdFsaKZU4Db/fIIhSnuzUIFMqViYv0Yp8Nf6OO0eaA4UBDhMc0yseFjdfFfdhtBDS88Ut2waXio6ZQ==
   dependencies:
-    "@vanilla-extract/css" "^1.2.0"
+    "@vanilla-extract/css" "^1.5.0"
     chalk "^4.1.1"
     dedent "^0.7.0"
     esbuild "^0.11.16"
