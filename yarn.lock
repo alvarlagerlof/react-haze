@@ -3451,9 +3451,9 @@
     tsutils "^3.17.1"
 
 "@vanilla-extract/babel-plugin@^1.0.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@vanilla-extract/babel-plugin/-/babel-plugin-1.1.0.tgz#a6a9efa7f4f377e05b0754874f31b8b21ca292e0"
-  integrity sha512-gHNK9Il6FtZurDJ/x96jR4Y2HzdxzbdTDb6cGDTmSO6QP/1zE+2BJRMgvmCTPoS+mbm8pK0AgaBk9HIspRAgrQ==
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/babel-plugin/-/babel-plugin-1.1.1.tgz#efbd286554a885f77be85f17a3eab5b0626fd28b"
+  integrity sha512-77i1pvgkL1ViKFr0dJQhzWG7ouR5la2S/d8Yha6eNbUCwaZPq9m8yQWTBFJxJQt+xC7MO3XydME2sBDYtDqUPw==
   dependencies:
     "@babel/core" "^7.13.10"
     "@babel/template" "^7.12.13"
