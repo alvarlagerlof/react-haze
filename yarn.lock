@@ -3289,9 +3289,9 @@
     "@types/react" "*"
 
 "@types/react-dom@^17.0.9":
-  version "17.0.9"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.9.tgz#441a981da9d7be117042e1a6fd3dac4b30f55add"
-  integrity sha512-wIvGxLfgpVDSAMH5utdL9Ngm5Owu0VsGmldro3ORLXV8CShrL8awVj06NuEXFQ5xyaYfdca7Sgbk/50Ri1GdPg==
+  version "17.0.10"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.10.tgz#d6972ec018d23cf22b99597f1289343d99ea9d9d"
+  integrity sha512-8oz3NAUId2z/zQdFI09IMhQPNgIbiP8Lslhv39DIDamr846/0spjZK0vnrMak0iB8EKb9QFTTIdg2Wj2zH5a3g==
   dependencies:
     "@types/react" "*"
 
@@ -3451,15 +3451,15 @@
     tsutils "^3.17.1"
 
 "@vanilla-extract/babel-plugin@^1.0.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@vanilla-extract/babel-plugin/-/babel-plugin-1.1.0.tgz#a6a9efa7f4f377e05b0754874f31b8b21ca292e0"
-  integrity sha512-gHNK9Il6FtZurDJ/x96jR4Y2HzdxzbdTDb6cGDTmSO6QP/1zE+2BJRMgvmCTPoS+mbm8pK0AgaBk9HIspRAgrQ==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/babel-plugin/-/babel-plugin-1.1.2.tgz#2433642db1b7179ce030c07d525da42abd97279a"
+  integrity sha512-+h2NC8WstgfNNszEB3GgT3WcsyFVAvxGgtN9oiIVLjgGfacB6hxJz+ep7Akk7nj+BH4ix9MYcFk4/IIdRM66tw==
   dependencies:
     "@babel/core" "^7.13.10"
     "@babel/template" "^7.12.13"
-    "@vanilla-extract/integration" "^1.4.0"
+    "@vanilla-extract/integration" "^1.4.3"
 
-"@vanilla-extract/css@^1.1.1", "@vanilla-extract/css@^1.5.0":
+"@vanilla-extract/css@^1.1.1":
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/@vanilla-extract/css/-/css-1.6.1.tgz#39c3b58f2b5f1b728e901b059c5021b8769d5a99"
   integrity sha512-MTR8pHVV80/B4H37JqyUwC8GUwA6DMdClcjgrU98svLrnmWq2Y8BWox9OQAOovoOwGtZwkJhjTQUmPkK0D13Bw==
@@ -3474,6 +3474,21 @@
     deep-object-diff "^1.1.0"
     deepmerge "^4.2.2"
 
+"@vanilla-extract/css@^1.6.2":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/css/-/css-1.6.2.tgz#5deea31f2d55be206bc2dc7bece956f115517cbe"
+  integrity sha512-khWHNQ0KLLn68jt54Xp2GqKzViyBE0xGU8dlv9JVqOlTX06FG7MqDL0FbZW1/nvOGcHZv94WZzp6cayk+rjokA==
+  dependencies:
+    "@emotion/hash" "^0.8.0"
+    "@vanilla-extract/private" "^1.0.1"
+    chalk "^4.1.1"
+    css-what "^5.0.1"
+    cssesc "^3.0.0"
+    csstype "^3.0.7"
+    deep-object-diff "^1.1.0"
+    deepmerge "^4.2.2"
+    outdent "^0.8.0"
+
 "@vanilla-extract/dynamic@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@vanilla-extract/dynamic/-/dynamic-2.0.0.tgz#166f5b69db992f0567c637f767d9ef060f018eff"
@@ -3481,19 +3496,19 @@
   dependencies:
     "@vanilla-extract/private" "^1.0.0"
 
-"@vanilla-extract/integration@^1.4.0":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@vanilla-extract/integration/-/integration-1.4.1.tgz#698c69c7545542f67eb9180469029da2be85546b"
-  integrity sha512-LH+pHMvjpdFsaKZU4Db/fIIhSnuzUIFMqViYv0Yp8Nf6OO0eaA4UBDhMc0yseFjdfFfdhtBDS88Ut2waXio6ZQ==
+"@vanilla-extract/integration@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/integration/-/integration-1.4.3.tgz#cb195f9b3083a54c267a0dbabf5f1fb19939f086"
+  integrity sha512-Jax0lADpx8LYwwOyiob9+koGm3H4xSMkWOD+pGTeI87YquALUcp9tqlhZOSPX3X5Jdlpyw2Gxxmo6wa47UEWHA==
   dependencies:
-    "@vanilla-extract/css" "^1.5.0"
+    "@vanilla-extract/css" "^1.6.2"
     chalk "^4.1.1"
-    dedent "^0.7.0"
     esbuild "^0.11.16"
     eval "^0.1.6"
     find-up "^5.0.0"
     javascript-stringify "^2.0.1"
     lodash "^4.17.21"
+    outdent "^0.8.0"
 
 "@vanilla-extract/private@^1.0.0", "@vanilla-extract/private@^1.0.1":
   version "1.0.1"
@@ -11281,6 +11296,11 @@ os-tmpdir@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
   integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
+
+outdent@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/outdent/-/outdent-0.8.0.tgz#2ebc3e77bf49912543f1008100ff8e7f44428eb0"
+  integrity sha512-KiOAIsdpUTcAXuykya5fnVVT+/5uS0Q1mrkRHcF89tpieSmY33O/tmc54CqwA+bfhbtEfZUNLHaPUiB9X3jt1A==
 
 overlayscrollbars@^1.13.1:
   version "1.13.1"
