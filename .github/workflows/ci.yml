@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node: [12, 14, 16]
+        node: [14, 16]
 
     steps:
       - name: Checkout repo
@@ -30,8 +30,8 @@ jobs:
       #   run: yarn lint
       # Removed until https://github.com/formium/tsdx/issues/1056 is fixed
 
-      - name: Test
-        run: yarn test --ci --coverage --maxWorkers=2
+      # - name: Test
+      #   run: yarn test --ci --coverage --maxWorkers=2
 
   publish:
     name: "Publish Module to NPM"
