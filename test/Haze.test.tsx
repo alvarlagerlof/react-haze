@@ -12,7 +12,7 @@ describe("Haze", () => {
   //       orientation="horizontal"
   //       scrollOffset={20}
   //       gradientColor="white"
-  //       gradientSize="100px"
+  //       gradientSize={100}
   //     >
   //       <p>Child</p>
   //     </Horizontal>,
@@ -27,7 +27,7 @@ describe("Haze", () => {
   //       orientation="vertical"
   //       scrollOffset={20}
   //       gradientColor="white"
-  //       gradientSize="100px"
+  //       gradientSize={100}
   //     >
   //       <p>Child</p>
   //     </Vertical>,
